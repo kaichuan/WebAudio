@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>GipsyDanger</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/slider.css">
+</head>
+<body>
+<!--[if lt IE 7]>
+<p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+<![endif]-->
+
+<div class="container">
+    <div class="row">
+        <div class="span6">
+            <h3>Mono Frequency Generator</h3>
+            <input id="freqRange" type="range" min="20" max="5500" value="5125" style="width:100%">
+            <!--<input id="freqRange" type="range" min="5000" max="5500" style="width:100%">-->
+            <p class="text-right"><span class="label label-info"><span id="freqLabel">440</span><span>Hz</span></span> </p>
+            <button id="soloGenToggle" class="btn btn-success">Start</button>
+            <br>
+            <!--<button id="chirpBtn">Chirp</button><br>-->
+            <hr>
+            <h3>Bi Frequencies Generator</h3>
+            <input id="freqRange1" type="range" min="20" max="5500" value="5125" style="width:100%">
+            <input id="freqRange2" type="range" min="20" max="5500" value="5150" style="width:100%">
+            <p class="text-right">Freq 1: <span class="label label-info"><span id="freqLabel1">440</span><span>Hz</span></span> </p>
+            <p class="text-right">Freq 2: <span class="label label-info"><span id="freqLabel2">440</span><span>Hz</span></span> </p>
+            <button id="BiGenToggle" class="btn btn-success">Start</button>
+            <br>
+            <!--<button id="chirpBtn">Chirp</button><br>-->
+            <hr>
+
+            <h3>Bi Frequency Encoder</h3>
+            <label>Encode bits: </label><input type='text' value="11101" id="seq">
+            <label>Slot time(ms): </label><input type='text' value="5000" id="time">
+            <button id="seqBtn" class="btn btn-primary pull-right">Start</button>
+            <button id="quad" class="btn" >4Frequencies</button>
+        </div>
+        <div class="span6">
+            <h3>Mono Frequency Identifier</h3>
+            <label>Max decibel: </label><input type="text" value="0" id="maxDecibel">
+            <label>Min decibel: </label><input type="text" value="-120" id="minDecibel">
+            <br>
+            <p class="pull-right">
+            <span class="label"><span>Bin:  </span><span id="DecodeBin"></span></span> <br>
+            <span class="label"><span>Freq: </span><span id="DecodedFreq"></span></span>  <br>
+            </p>
+            <button id="SoloDecodeToggle" class="btn btn-info">Start</button> <br>
+
+            <hr>
+            <h3>Bi Frequencies Decoder</h3>
+
+            <button id="decodeBtn" class="btn btn-info">Decode</button>
+            <label id="result"></label>
+
+            <button id="rec" class="btn">record</button>
+
+        </div>
+    </div>
+
+</div>
+
+
+
+
+
+<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
+<script src="js/bootstrap.js"></script>
+<script src="js/bootstrap-slider.js"></script>
+
+<script src="js/decoder.js"></script>
+<script src="js/encoder.js"></script>
+
+</body>
+</html>

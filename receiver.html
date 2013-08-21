@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Receiver</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+        <![endif]-->
+
+        <script>
+            var histogram = d3.layout.histogram().bins(10)
+
+        </script>
+
+
+
+
+
+
+
+
+        <p>Frequency Analyser</p>
+        <label>FFT Size (must be a non-zero power of two in the range 32 to 2048):</label> <input type="number" id="fftSize" value="2048"/><br>
+        <label>Detect range (Hz):</label><input type='number' id='min' value='20000'/><input type='number' id='max' value='30000'/>
+        <table border="1" width="50%"><tr><th>Freq</th><th>Power</th></tr>
+            <tbody id="spectrum">
+
+            </tbody>
+        </table>
+        <button id="start">Start</button><button id="stop">Stop</button>  <br>
+
+        <button id="chirpBtn">chirpListen</button>
+
+
+
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
+        <script src="js/d3.v3.min.js"></script>
+
+        <script src="js/decoder.js"></script>
+        <script src="js/encoder.js"></script>
+
+
+
+
+    </body>
+</html>
